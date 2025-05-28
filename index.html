@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Time Dashboard</title>
+    <!-- Link to the compiled CSS file, not the SCSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <div class="weather-section">
+                <div class="search-box">
+                    <input type="text" placeholder="Search city..." id="search-input">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="weather-info">
+                    <div class="location">
+                        <h2 id="city">Loading...</h2>
+                        <div class="country" id="country"></div>
+                    </div>
+                    <div class="weather-display">
+                        <div class="temperature">
+                            <span id="temp">--</span>°C
+                        </div>
+                        <div class="weather-icon">
+                            <img src="" alt="Weather Icon" id="weather-icon">
+                        </div>
+                    </div>
+                    <div class="weather-description" id="description">--</div>
+                    <div class="weather-details">
+                        <div class="detail">
+                            <i class="fas fa-wind"></i>
+                            <span id="wind">-- km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-tint"></i>
+                            <span id="humidity">--%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fas fa-compress-alt"></i>
+                            <span id="pressure">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="time-section">
+                <div class="time" id="time">00:00:00</div>
+                <div class="date" id="date">Monday, January 1</div>
+                <div class="timezone" id="timezone">UTC+00:00</div>
+            </div>
+        </div>
+    </div>
+    <div class="globe-container">
+        <div class="globe"></div>
+        <div class="close-globe"><i class="fas fa-times"></i></div>
+        
+        <!-- City markers -->
+        <div class="city-marker pulse" data-city="New York" style="top: 40%; left: 25%"></div>
+        <div class="city-marker" data-city="London" style="top: 35%; left: 45%"></div>
+        <div class="city-marker" data-city="Tokyo" style="top: 40%; left: 80%"></div>
+        <div class="city-marker" data-city="Sydney" style="top: 70%; left: 85%"></div>
+        <div class="city-marker" data-city="Rio de Janeiro" style="top: 65%; left: 30%"></div>
+        <div class="city-marker" data-city="Moscow" style="top: 30%; left: 55%"></div>
+        <div class="city-marker" data-city="Cairo" style="top: 45%; left: 52%"></div>
+        <div class="city-marker" data-city="Mumbai" style="top: 50%; left: 65%"></div>
+        
+        <!-- Popular cities list -->
+        <div class="popular-cities">
+            <h3>Popular Cities</h3>
+            <ul>
+                <li data-city="New York">New York</li>
+                <li data-city="London">London</li>
+                <li data-city="Tokyo">Tokyo</li>
+                <li data-city="Sydney">Sydney</li>
+                <li data-city="Rio de Janeiro">Rio de Janeiro</li>
+                <li data-city="Moscow">Moscow</li>
+                <li data-city="Cairo">Cairo</li>
+                <li data-city="Mumbai">Mumbai</li>
+                <li data-city="Paris">Paris</li>
+                <li data-city="Beijing">Beijing</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
